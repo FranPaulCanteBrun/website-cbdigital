@@ -19,11 +19,17 @@ export default defineConfig({
     webAnalytics: {
       enabled: false,
     },
+    isr: {
+      expiration: false,
+    },
   }),
   build: {
     assets: 'assets',
   },
   vite: {
+    ssr: {
+      noExternal: ['@astrojs/vercel'],
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
