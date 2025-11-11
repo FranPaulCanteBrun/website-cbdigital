@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "_render.func": {
-      "includeFiles": "dist/**"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
