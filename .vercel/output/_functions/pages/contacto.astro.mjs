@@ -1,5 +1,5 @@
 import { e as createComponent, f as createAstro, m as maybeRenderHead, h as addAttribute, k as renderComponent, l as renderScript, r as renderTemplate } from '../chunks/astro/server_CU9lyQ3U.mjs';
-import { $ as $$Button, a as $$BaseLayout } from '../chunks/BaseLayout_bJ8hCXb1.mjs';
+import { $ as $$Button, a as $$BaseLayout } from '../chunks/BaseLayout_CVjj1dkA.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$1 = createAstro();

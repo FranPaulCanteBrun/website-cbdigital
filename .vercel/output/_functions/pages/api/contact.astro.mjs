@@ -31,6 +31,7 @@ function sanitizeContactForm(data) {
   };
 }
 
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_SITE_URL": "http://localhost:4321", "SITE": undefined, "SSR": true};
 async function sendEmail(data) {
   const apiKey = "re_GmX8AzeK_DLyz7D2y9h58UwDhNbA3fgBj";
   const fromEmail = "onboarding@resend.dev";
@@ -132,7 +133,11 @@ ${data.message}
     clearTimeout(timeoutId);
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      if (false) ;
+      if (Object.assign(__vite_import_meta_env__, { RESEND_API_KEY: "re_GmX8AzeK_DLyz7D2y9h58UwDhNbA3fgBj", RESEND_FROM_EMAIL: "onboarding@resend.dev", RESEND_TO_EMAIL: "francocanteropaul@gmail.com", OS: process.env.OS }).DEV) {
+        console.error("Error en Resend API:", errorData);
+        console.error("Status:", response.status);
+        console.error("Status Text:", response.statusText);
+      }
       const errorMessage = errorData.message || errorData.error?.message || "Error al enviar el mensaje. Por favor, intentá nuevamente.";
       return {
         success: false,
@@ -145,6 +150,20 @@ ${data.message}
       message: "Mensaje enviado correctamente"
     };
   } catch (error) {
+    console.error("Error al enviar email:", error);
+    if (error instanceof Error) {
+      console.error("Error message:", error.message);
+      console.error("Error name:", error.name);
+      if (error.stack) {
+        console.error("Error stack:", error.stack);
+      }
+    }
+    if (error instanceof Error && error.name === "AbortError") {
+      return {
+        success: false,
+        error: "Timeout al enviar el mensaje. Por favor, intentá nuevamente."
+      };
+    }
     return {
       success: false,
       error: "Error de conexión. Por favor, intentá nuevamente más tarde."
@@ -237,10 +256,17 @@ const POST = async ({ request }) => {
       }
     );
   } catch (error) {
+    console.error("Error en API de contacto:", error);
+    if (error instanceof Error) {
+      console.error("Error message:", error.message);
+      console.error("Error stack:", error.stack);
+    }
+    const errorMessage = error instanceof Error ? error.message : "Error desconocido";
+    const isConfigError = errorMessage.includes("RESEND_API_KEY") || errorMessage.includes("configuración") || false;
     return new Response(
       JSON.stringify({
         success: false,
-        error: "Error interno del servidor",
+        error: isConfigError ? "Error de configuración del servidor. Por favor, contacta al administrador." : "Error interno del servidor",
         ...{}
       }),
       {

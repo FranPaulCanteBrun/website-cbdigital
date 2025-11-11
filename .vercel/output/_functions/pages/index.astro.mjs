@@ -1,5 +1,5 @@
 import { e as createComponent, f as createAstro, m as maybeRenderHead, k as renderComponent, r as renderTemplate } from '../chunks/astro/server_CU9lyQ3U.mjs';
-import { $ as $$Button, a as $$BaseLayout } from '../chunks/BaseLayout_bJ8hCXb1.mjs';
+import { $ as $$Button, a as $$BaseLayout } from '../chunks/BaseLayout_CVjj1dkA.mjs';
 import { $ as $$ServiceCard } from '../chunks/ServiceCard_aBs-uwBy.mjs';
 import { $ as $$ProjectCard } from '../chunks/ProjectCard_By7OSXKF.mjs';
 import { $ as $$TestimonialCard } from '../chunks/TestimonialCard_gjg2Ucp_.mjs';

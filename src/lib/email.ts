@@ -29,17 +29,17 @@ export async function sendEmail(data: EmailData): Promise<EmailResponse> {
   const toEmail = import.meta.env.RESEND_TO_EMAIL || 'francocanteropaul@gmail.com';
 
   if (!apiKey) {
-    if (import.meta.env.DEV) {
-      console.error('RESEND_API_KEY no está configurada');
-      console.error('Variables de entorno disponibles:', {
-        hasApiKey: !!import.meta.env.RESEND_API_KEY,
-        hasFromEmail: !!import.meta.env.RESEND_FROM_EMAIL,
-        hasToEmail: !!import.meta.env.RESEND_TO_EMAIL,
-      });
-    }
+    // Log siempre para debugging en Vercel
+    console.error('RESEND_API_KEY no está configurada');
+    console.error('Variables de entorno disponibles:', {
+      hasApiKey: !!import.meta.env.RESEND_API_KEY,
+      hasFromEmail: !!import.meta.env.RESEND_FROM_EMAIL,
+      hasToEmail: !!import.meta.env.RESEND_TO_EMAIL,
+      envKeys: Object.keys(import.meta.env).filter(key => key.includes('RESEND')),
+    });
     return {
       success: false,
-      error: 'Error de configuración del servidor',
+      error: 'Error de configuración del servidor: RESEND_API_KEY no está configurada',
     };
   }
 
@@ -165,9 +165,24 @@ ${data.message}
       message: 'Mensaje enviado correctamente',
     };
   } catch (error) {
-    if (import.meta.env.DEV) {
-      console.error('Error al enviar email:', error);
+    // Log siempre para debugging en Vercel
+    console.error('Error al enviar email:', error);
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error name:', error.name);
+      if (error.stack) {
+        console.error('Error stack:', error.stack);
+      }
     }
+    
+    // Si es un error de aborto (timeout), indicarlo
+    if (error instanceof Error && error.name === 'AbortError') {
+      return {
+        success: false,
+        error: 'Timeout al enviar el mensaje. Por favor, intentá nuevamente.',
+      };
+    }
+    
     return {
       success: false,
       error: 'Error de conexión. Por favor, intentá nuevamente más tarde.',

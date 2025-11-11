@@ -1,5 +1,5 @@
 import { e as createComponent, f as createAstro, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_CU9lyQ3U.mjs';
-import { a as $$BaseLayout } from '../chunks/BaseLayout_bJ8hCXb1.mjs';
+import { a as $$BaseLayout } from '../chunks/BaseLayout_CVjj1dkA.mjs';
 import { $ as $$ProjectCard } from '../chunks/ProjectCard_By7OSXKF.mjs';
 export { renderers } from '../renderers.mjs';
 

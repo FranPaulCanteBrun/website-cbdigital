@@ -104,19 +104,27 @@ export const POST: APIRoute = async ({ request }) => {
       }
     );
   } catch (error) {
-    if (import.meta.env.DEV) {
-      console.error('Error en API de contacto:', error);
-      if (error instanceof Error) {
-        console.error('Error message:', error.message);
-        console.error('Error stack:', error.stack);
-      }
+    // Log en producción también para Vercel
+    console.error('Error en API de contacto:', error);
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
     }
+    
+    // Verificar si es un error de configuración
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+    const isConfigError = errorMessage.includes('RESEND_API_KEY') || 
+                         errorMessage.includes('configuración') ||
+                         !import.meta.env.RESEND_API_KEY;
+    
     return new Response(
       JSON.stringify({
         success: false,
-        error: 'Error interno del servidor',
+        error: isConfigError 
+          ? 'Error de configuración del servidor. Por favor, contacta al administrador.'
+          : 'Error interno del servidor',
         ...(import.meta.env.DEV && error instanceof Error
-          ? { details: error.message }
+          ? { details: error.message, stack: error.stack }
           : {}),
       }),
       {
