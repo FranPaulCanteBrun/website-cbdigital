@@ -16,6 +16,9 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     functionPerRoute: false,
+    webAnalytics: {
+      enabled: false,
+    },
   }),
   build: {
     assets: 'assets',
