@@ -39,31 +39,21 @@ const servicesList = [
   { key: 'consulting', icon: '🔧' },
 ];
 
-// Placeholders de proyectos
+// Proyectos reales
 const projects = [
   {
     id: 1,
-    title: currentLocale === 'es' ? 'Sitio Web PYME Local' : 'Local SME Website',
-    problem: currentLocale === 'es' ? 'Falta de presencia online' : 'Lack of online presence',
-    solution: currentLocale === 'es' ? 'Sitio web responsivo y optimizado' : 'Responsive and optimized website',
-    impact: currentLocale === 'es' ? 'Incremento del 50% en consultas' : '50% increase in inquiries',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    id: 2,
-    title: currentLocale === 'es' ? 'App de Gestión Interna' : 'Internal Management App',
-    problem: currentLocale === 'es' ? 'Procesos manuales ineficientes' : 'Inefficient manual processes',
-    solution: currentLocale === 'es' ? 'Aplicación de escritorio personalizada' : 'Custom desktop application',
-    impact: currentLocale === 'es' ? 'Reducción del 70% en tiempo' : '70% time reduction',
-    technologies: ['TypeScript', 'Electron'],
-  },
-  {
-    id: 3,
-    title: currentLocale === 'es' ? 'App Móvil para Clientes' : 'Mobile App for Clients',
-    problem: currentLocale === 'es' ? 'Acceso limitado a servicios' : 'Limited access to services',
-    solution: currentLocale === 'es' ? 'App móvil nativa iOS/Android' : 'Native iOS/Android mobile app',
-    impact: currentLocale === 'es' ? 'Mejora en satisfacción del cliente' : 'Improved customer satisfaction',
-    technologies: ['React Native', 'TypeScript'],
+    title: currentLocale === 'es' ? 'Sistema de Gestión de Pacientes - Nefrología' : 'Patient Management System - Nephrology',
+    problem: currentLocale === 'es' 
+      ? 'Necesidad de mejorar el seguimiento y gestión de pacientes nefrológicos, incluyendo historiales de tratamientos, evolución clínica y control de medicaciones específicas del área.'
+      : 'Need to improve tracking and management of nephrology patients, including treatment histories, clinical evolution, and control of area-specific medications.',
+    solution: currentLocale === 'es'
+      ? 'Aplicación de escritorio desarrollada a medida mediante un proceso colaborativo que incluyó análisis detallado de necesidades específicas, consultas personalizadas y diseño de funcionalidades adaptadas al flujo de trabajo de la especialidad médica.'
+      : 'Custom desktop application developed through a collaborative process that included detailed analysis of specific needs, personalized consultations, and design of functionalities adapted to the medical specialty workflow.',
+    impact: currentLocale === 'es'
+      ? 'Mejora significativa en el seguimiento de pacientes y tratamientos, optimización de procesos administrativos y mayor eficiencia en la gestión clínica diaria.'
+      : 'Significant improvement in patient and treatment tracking, optimization of administrative processes, and greater efficiency in daily clinical management.',
+    technologies: ['TypeScript', 'Electron', 'Desktop App'],
   },
 ];
 
