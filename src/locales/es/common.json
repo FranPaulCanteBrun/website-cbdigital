@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "InnovaTec",
+    "name": "CB Digital",
     "tagline": "Tecnología cercana para transformar tu trabajo",
-    "description": "Desarrollo de software y soluciones digitales para PYMES y profesionales"
+    "description": "Desarrollo de software, soluciones digitales e inteligencia artificial para PYMES y profesionales"
   },
   "nav": {
     "home": "Inicio",
@@ -19,7 +19,7 @@
     "learnMore": "Conocer más"
   },
   "footer": {
-    "copyright": "© InnovaTec — Confianza, cercanía y tecnología accesible.",
+    "copyright": "© CB Digital — Confianza, cercanía y tecnología accesible.",
     "builtWith": "Hecho con",
     "rights": "Todos los derechos reservados"
   },

@@ -1,7 +1,7 @@
 {
-  "name": "InnovaTec",
-  "short_name": "InnovaTec",
-  "description": "Desarrollo de software y soluciones digitales para PYMES y profesionales",
+  "name": "CB Digital",
+  "short_name": "CB Digital",
+  "description": "Desarrollo de software, soluciones digitales e inteligencia artificial para PYMES y profesionales",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

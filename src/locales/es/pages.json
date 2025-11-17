@@ -2,7 +2,7 @@
   "home": {
     "hero": {
       "title": "Tecnología cercana para transformar tu trabajo",
-      "subtitle": "En InnovaTec creo soluciones simples y confiables para que la tecnología sea realmente útil en tu día a día.",
+      "subtitle": "En CB Digital creo soluciones simples y confiables para que la tecnología sea realmente útil en tu día a día.",
       "cta": "Solicitá tu solución digital"
     },
     "services": {
@@ -16,7 +16,7 @@
     },
     "testimonials": {
       "title": "Lo que dicen mis clientes",
-      "subtitle": "Testimonios reales de quienes confiaron en InnovaTec"
+      "subtitle": "Testimonios reales de quienes confiaron en CB Digital"
     }
   },
   "services": {
@@ -39,7 +39,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "subtitle": "Conocé quién está detrás de InnovaTec"
+    "subtitle": "Conocé quién está detrás de CB Digital"
   },
   "contact": {
     "title": "Contacto",

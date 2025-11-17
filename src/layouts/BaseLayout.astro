@@ -1,6 +1,6 @@
 ---
 /**
- * Layout Base - InnovaTec
+ * Layout Base - CB Digital
  * 
  * Layout principal con Header, Footer y CookieBanner.
  * 
@@ -24,7 +24,7 @@ interface Props {
 
 const {
   title,
-  description = 'Desarrollo de software y soluciones digitales para PYMES y profesionales',
+  description = 'Desarrollo de software, soluciones digitales e inteligencia artificial para PYMES y profesionales',
   ogImage = '/images/og-default.jpg',
   canonical,
   noindex = false,
@@ -44,7 +44,7 @@ const currentLocale = serverLocale;
 const translations = currentLocale === 'es' ? commonEs.default : commonEn.default;
 
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://innovatac.com';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://cbdigital.com';
 const currentUrl = canonical || Astro.url.pathname;
 const fullUrl = `${siteUrl}${currentUrl}`;
 ---

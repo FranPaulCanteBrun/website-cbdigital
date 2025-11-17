@@ -1,5 +1,5 @@
 /**
- * Cliente de Email - InnovaTec
+ * Cliente de Email - CB Digital
  * 
  * Integración con Resend para envío de emails.
  * 
@@ -25,7 +25,7 @@ export interface EmailResponse {
  */
 export async function sendEmail(data: EmailData): Promise<EmailResponse> {
   const apiKey = import.meta.env.RESEND_API_KEY;
-  const fromEmail = import.meta.env.RESEND_FROM_EMAIL || 'noreply@innovatac.com';
+  const fromEmail = import.meta.env.RESEND_FROM_EMAIL || 'noreply@cbdigital.com';
   const toEmail = import.meta.env.RESEND_TO_EMAIL || 'francocanteropaul@gmail.com';
 
   if (!apiKey) {

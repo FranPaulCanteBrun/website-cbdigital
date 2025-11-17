@@ -1,12 +1,12 @@
 /**
- * Sitemap XML - InnovaTec
+ * Sitemap XML - CB Digital
  * 
  * Genera sitemap.xml automáticamente.
  */
 
 import type { APIRoute } from 'astro';
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://innovatac.com';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://cbdigital.com';
 
 const pages = [
   '',

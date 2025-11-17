@@ -1,6 +1,6 @@
 ---
 /**
- * Página Testimonios - InnovaTec
+ * Página Testimonios - CB Digital
  * 
  * Testimonios de clientes.
  */
@@ -24,31 +24,15 @@ const currentLocale = serverLocale;
 const pages = currentLocale === 'es' ? pagesEs.default : pagesEn.default;
 const common = currentLocale === 'es' ? commonEs.default : commonEn.default;
 
-// Placeholders de testimonios
+// Testimonios reales
 const testimonials = [
   {
     id: 1,
-    name: currentLocale === 'es' ? 'María González' : 'Maria Gonzalez',
-    role: currentLocale === 'es' ? 'Directora, Empresa Local' : 'Director, Local Company',
+    name: 'Natalia C.',
+    role: currentLocale === 'es' ? 'Médica Nefróloga' : 'Nephrologist Doctor',
     text: currentLocale === 'es'
-      ? 'InnovaTec transformó nuestra presencia online. El sitio web es moderno, rápido y fácil de usar. Recomendado 100%.'
-      : 'InnovaTec transformed our online presence. The website is modern, fast and easy to use. 100% recommended.',
-  },
-  {
-    id: 2,
-    name: currentLocale === 'es' ? 'Carlos Rodríguez' : 'Carlos Rodriguez',
-    role: currentLocale === 'es' ? 'Gerente, PYME' : 'Manager, SME',
-    text: currentLocale === 'es'
-      ? 'La aplicación de escritorio que desarrollaron optimizó nuestros procesos internos. Excelente trabajo y soporte.'
-      : 'The desktop application they developed optimized our internal processes. Excellent work and support.',
-  },
-  {
-    id: 3,
-    name: currentLocale === 'es' ? 'Ana Martínez' : 'Ana Martinez',
-    role: currentLocale === 'es' ? 'Emprendedora' : 'Entrepreneur',
-    text: currentLocale === 'es'
-      ? 'Profesional, cercano y con resultados. InnovaTec entendió perfectamente nuestras necesidades.'
-      : 'Professional, close and with results. InnovaTec perfectly understood our needs.',
+      ? 'La aplicación de escritorio desarrollada a medida me ha ayudado significativamente a mejorar el seguimiento de mis pacientes y sus tratamientos. El proceso fue muy profesional: me realizaron preguntas específicas sobre mis necesidades y todo fue integrado perfectamente en la aplicación. Recomendado 100%.'
+      : 'The custom desktop application has significantly helped me improve the tracking of my patients and their treatments. The process was very professional: they asked me specific questions about my needs and everything was perfectly integrated into the application. 100% recommended.',
   },
 ];
 ---

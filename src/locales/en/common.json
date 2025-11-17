@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "InnovaTec",
+    "name": "CB Digital",
     "tagline": "Close technology to transform your work",
-    "description": "Software development and digital solutions for SMEs and professionals"
+    "description": "Software development, digital solutions and artificial intelligence for SMEs and professionals"
   },
   "nav": {
     "home": "Home",
@@ -19,7 +19,7 @@
     "learnMore": "Learn more"
   },
   "footer": {
-    "copyright": "© InnovaTec — Trust, closeness and accessible technology.",
+    "copyright": "© CB Digital — Trust, closeness and accessible technology.",
     "builtWith": "Built with",
     "rights": "All rights reserved"
   },

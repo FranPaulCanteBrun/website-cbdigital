@@ -38,6 +38,16 @@
       "Planificación y estimaciones",
       "Acompañamiento en el desarrollo"
     ]
+  },
+  "ai": {
+    "title": "Inteligencia Artificial",
+    "description": "Soluciones de IA personalizadas: ingeniería de prompts, automatización inteligente, generación de imágenes y análisis de datos. Potenciá tu negocio con inteligencia artificial aplicada.",
+    "benefits": [
+      "Ingeniería de prompts avanzada",
+      "Automatización inteligente de procesos",
+      "Generación de imágenes con IA",
+      "Análisis y procesamiento de datos"
+    ]
   }
 }
 

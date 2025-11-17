@@ -1,6 +1,6 @@
 ---
 /**
- * Página Sobre Mí - InnovaTec
+ * Página Sobre Mí - CB Digital
  * 
  * Bio profesional y humana.
  */
@@ -27,11 +27,13 @@ const bio = {
   es: {
     human: 'Soy Franco Paul Cantero Brunelli, técnico en desarrollo de software apasionado por crear soluciones que realmente importan. Creo en la tecnología como herramienta para mejorar el día a día de las personas y los negocios, no como un fin en sí mismo.',
     technical: 'Me especializo en desarrollo full-stack con TypeScript, React, Node.js y bases de datos. Trabajo con metodologías ágiles, principios SOLID y buenas prácticas de ingeniería de software. Mi enfoque está en crear código limpio, mantenible y escalable.',
+    ai: 'Cuento con formación especializada en Inteligencia Artificial, habiendo completado el Master de Founderz en IA e Innovación. Me dedico a la ingeniería de prompts, creación de imágenes con IA, automatización inteligente y aplicaciones prácticas de la inteligencia artificial en el ámbito empresarial. Mi objetivo es ayudar a las empresas a aprovechar el potencial de la IA de manera efectiva y accesible.',
     philosophy: 'Creo en la cercanía con los clientes, entender sus necesidades reales y ofrecer soluciones simples y confiables. La tecnología debe ser accesible y útil, sin complicaciones innecesarias.',
   },
   en: {
     human: 'I am Franco Paul Cantero Brunelli, a software development technician passionate about creating solutions that really matter. I believe in technology as a tool to improve people\'s and businesses\' daily lives, not as an end in itself.',
     technical: 'I specialize in full-stack development with TypeScript, React, Node.js and databases. I work with agile methodologies, SOLID principles and software engineering best practices. My focus is on creating clean, maintainable and scalable code.',
+    ai: 'I have specialized training in Artificial Intelligence, having completed the Founderz Master\'s in AI and Innovation. I focus on prompt engineering, AI image creation, intelligent automation and practical applications of artificial intelligence in business. My goal is to help companies leverage the potential of AI effectively and accessibly.',
     philosophy: 'I believe in closeness with clients, understanding their real needs and offering simple and reliable solutions. Technology should be accessible and useful, without unnecessary complications.',
   },
 };
@@ -75,6 +77,16 @@ const bio = {
             </h2>
             <p class="text-lg text-light-text-primary dark:text-white leading-relaxed">
               {currentLocale === 'es' ? bio.es.technical : bio.en.technical}
+            </p>
+          </section>
+
+          <!-- Inteligencia Artificial -->
+          <section>
+            <h2 class="text-2xl font-bold text-light-text-primary dark:text-white mb-4">
+              {currentLocale === 'es' ? 'Inteligencia Artificial' : 'Artificial Intelligence'}
+            </h2>
+            <p class="text-lg text-light-text-primary dark:text-white leading-relaxed">
+              {currentLocale === 'es' ? bio.es.ai : bio.en.ai}
             </p>
           </section>
 

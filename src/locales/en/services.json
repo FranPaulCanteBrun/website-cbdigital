@@ -38,6 +38,16 @@
       "Planning and estimates",
       "Development support"
     ]
+  },
+  "ai": {
+    "title": "Artificial Intelligence",
+    "description": "Custom AI solutions: prompt engineering, intelligent automation, image generation and data analysis. Boost your business with applied artificial intelligence.",
+    "benefits": [
+      "Advanced prompt engineering",
+      "Intelligent process automation",
+      "AI image generation",
+      "Data analysis and processing"
+    ]
   }
 }
 

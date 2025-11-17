@@ -1,5 +1,5 @@
 /**
- * API Endpoint para Formulario de Contacto - InnovaTec
+ * API Endpoint para Formulario de Contacto - CB Digital
  * 
  * Endpoint para procesar el formulario de contacto.
  * 

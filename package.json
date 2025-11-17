@@ -2,7 +2,7 @@
   "name": "innovatac",
   "type": "module",
   "version": "1.0.0",
-  "description": "Sitio web profesional de InnovaTec - Desarrollo de software y soluciones digitales",
+  "description": "Sitio web profesional de CB Digital - Desarrollo de software, soluciones digitales e inteligencia artificial",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
