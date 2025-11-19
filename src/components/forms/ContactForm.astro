@@ -131,8 +131,37 @@ const translations = currentLocale === 'es' ? pagesEs.default : pagesEn.default;
   </div>
 </form>
 
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" is:inline></script>
+
 <script>
         import { validateContactForm, sanitizeContactForm } from '@/lib/validators';
+
+  // Función para esperar a que EmailJS se cargue
+  function waitForEmailJS(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      // Si ya está cargado, resolver inmediatamente
+      if (typeof (window as any).emailjs !== 'undefined') {
+        resolve();
+        return;
+      }
+
+      // Esperar a que se cargue el script
+      let attempts = 0;
+      const maxAttempts = 50; // 5 segundos máximo
+      
+      const checkInterval = setInterval(() => {
+        attempts++;
+        if (typeof (window as any).emailjs !== 'undefined') {
+          clearInterval(checkInterval);
+          resolve();
+        } else if (attempts >= maxAttempts) {
+          clearInterval(checkInterval);
+          reject(new Error('EmailJS no se cargó a tiempo'));
+        }
+      }, 100);
+    });
+  }
 
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
@@ -312,34 +341,46 @@ const translations = currentLocale === 'es' ? pagesEs.default : pagesEn.default;
       if (submitLoading) submitLoading.classList.remove('hidden');
 
       try {
-        // Enviar email a través del endpoint de la API
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: sanitizedData.name,
-            email: sanitizedData.email,
+        // Esperar a que EmailJS se cargue
+        await waitForEmailJS();
+
+        // Configuración de EmailJS desde variables de entorno públicas
+        const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY || '';
+        const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID || '';
+        const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
+
+        if (!publicKey || !serviceId || !templateId) {
+          throw new Error('Configuración de EmailJS incompleta. Verifica que las variables de entorno estén configuradas.');
+        }
+
+        // Inicializar EmailJS si no está inicializado
+        (window as any).emailjs.init(publicKey);
+
+        // Enviar email a través de EmailJS
+        const result = await (window as any).emailjs.send(
+          serviceId,
+          templateId,
+          {
+            from_name: sanitizedData.name,
+            from_email: sanitizedData.email,
             message: sanitizedData.message,
-            website: '', // Honeypot (vacío)
-          }),
-        });
+            to_email: 'cbdigitalapps@gmail.com', // Email de destino
+          }
+        );
 
-        const result = await response.json();
-
-        if (result.success) {
+        if (result.status === 200) {
           showMessage(t.success, false);
           form.reset();
           incrementRateLimit();
         } else {
-          showMessage(result.error || t.error, true);
+          showMessage(t.error, true);
         }
       } catch (error) {
         if (import.meta.env.DEV) {
           console.error('Error sending email:', error);
         }
-        showMessage(t.connectionError, true);
+        const errorMessage = error instanceof Error ? error.message : t.connectionError;
+        showMessage(errorMessage, true);
       } finally {
         // Rehabilitar botón
         if (submitButton) submitButton.disabled = false;
