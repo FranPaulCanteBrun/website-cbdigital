@@ -89,9 +89,12 @@ const fullUrl = `${siteUrl}${currentUrl}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/cb_digital_favicon_ok.png" />
-    <link rel="apple-touch-icon" href="/images/cb_digital_favicon_ok.png" />
+    <!-- Favicons - Orden importante: primero el más específico -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/cb_digital_favicon_ok.png?v=3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/cb_digital_favicon_ok.png?v=3" />
+    <link rel="shortcut icon" type="image/png" href="/images/cb_digital_favicon_ok.png?v=3" />
+    <link rel="icon" href="/images/cb_digital_favicon_ok.png?v=3" />
+    <link rel="apple-touch-icon" href="/images/cb_digital_favicon_ok.png?v=3" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Preconnect para fuentes -->
