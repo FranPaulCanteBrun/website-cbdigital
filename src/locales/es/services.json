@@ -1,52 +1,52 @@
 {
   "web": {
-    "title": "Sitios web profesionales",
-    "description": "Diseño y desarrollo de sitios web modernos, responsivos y optimizados para SEO. Presencia online que refleja la identidad de tu negocio.",
+    "title": "Sitios web",
+    "description": "Creo tu sitio web para que tus clientes te encuentren fácilmente en internet. Es legible tanto en celulares como en computadoras y en Google.",
     "benefits": [
-      "Diseño responsivo y adaptable",
+      "Se adapta a celulares y computadoras",
       "Optimización para motores de búsqueda",
       "Carga rápida y rendimiento optimizado",
       "Fácil de mantener y actualizar"
     ]
   },
   "desktop": {
-    "title": "Apps de escritorio",
+    "title": "Programas para computadora",
     "description": "Aplicaciones de escritorio personalizadas para optimizar procesos internos y mejorar la productividad de tu equipo.",
     "benefits": [
-      "Soluciones a medida para tu negocio",
+      "Hecho especialmente para tu negocio",
       "Integración con sistemas existentes",
       "Interfaz intuitiva y fácil de usar",
       "Soporte y mantenimiento continuo"
     ]
   },
   "mobile": {
-    "title": "Apps mobile",
+    "title": "Apps para celular",
     "description": "Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Lleva tu negocio a la palma de la mano de tus clientes.",
     "benefits": [
       "Apps nativas e híbridas",
       "Diseño centrado en el usuario",
       "Publicación en App Store y Google Play",
-      "Actualizaciones y soporte continuo"
+      "Actualización y soporte continuo"
     ]
   },
   "consulting": {
-    "title": "Consultoría técnica",
-    "description": "Asesoramiento experto para llevar tu proyecto al siguiente nivel. Análisis, planificación y estrategia tecnológica.",
+    "title": "Asesoramiento",
+    "description": "Asesoramiento técnico experto para llevar proyectos al siguiente nivel. Análisis, planificación y estrategia tecnológica.",
     "benefits": [
       "Análisis de necesidades técnicas",
       "Arquitectura de soluciones",
       "Planificación y estimaciones",
-      "Acompañamiento en el desarrollo"
+      "Soporte durante el desarrollo"
     ]
   },
   "ai": {
     "title": "Inteligencia Artificial",
-    "description": "Soluciones de IA personalizadas: ingeniería de prompts, automatización inteligente, generación de imágenes y análisis de datos. Potenciá tu negocio con inteligencia artificial aplicada.",
+    "description": "Uso de IA para automatizar tareas, crear imágenes, analizar información. Potencia tu negocio con IA aplicada.",
     "benefits": [
-      "Ingeniería de prompts avanzada",
-      "Automatización inteligente de procesos",
+      "Automatización de tareas repetitivas",
       "Generación de imágenes con IA",
-      "Análisis y procesamiento de datos"
+      "Análisis y procesamiento de datos",
+      "Capacitación en uso de la IA para tu negocio"
     ]
   }
 }

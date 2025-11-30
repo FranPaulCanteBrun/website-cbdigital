@@ -1,13 +1,13 @@
 {
   "home": {
     "hero": {
-      "title": "Tecnología cercana para transformar tu trabajo",
-      "subtitle": "En CB Digital creo soluciones simples y confiables para que la tecnología sea realmente útil en tu día a día.",
-      "cta": "Solicitá tu solución digital"
+      "title": "Tecnología simple que realmente funciona",
+      "subtitle": "Creo soluciones digitales fáciles de usar para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.",
+      "cta": "Contame tu proyecto"
     },
     "services": {
       "title": "Servicios",
-      "subtitle": "Desarrollo de software a medida, sitios web profesionales y aplicaciones de escritorio. Sin complicaciones, con resultados."
+      "subtitle": "Sitios web, aplicaciones y programas hechos especialmente para vos. Sin términos complicados, solo resultados que funcionan."
     },
     "projects": {
       "title": "Proyectos destacados",
@@ -21,8 +21,8 @@
   },
   "services": {
     "title": "Servicios",
-    "subtitle": "Soluciones digitales adaptadas a tus necesidades",
-    "intro": "Desarrollo de software a medida, sitios web profesionales y aplicaciones de escritorio. Sin complicaciones, con resultados."
+    "subtitle": "Lo que puedo hacer por vos y tu negocio",
+    "intro": "Sitios web, aplicaciones y programas hechos especialmente para vos. Sin términos complicados, solo resultados que funcionan."
   },
   "projects": {
     "title": "Proyectos",

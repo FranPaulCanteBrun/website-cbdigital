@@ -25,16 +25,16 @@ const common = currentLocale === 'es' ? commonEs.default : commonEn.default;
 
 const bio = {
   es: {
-    human: 'Soy Franco Paul Cantero Brunelli, técnico en desarrollo de software apasionado por crear soluciones que realmente importan. Creo en la tecnología como herramienta para mejorar el día a día de las personas y los negocios, no como un fin en sí mismo.',
-    technical: 'Me especializo en desarrollo full-stack con TypeScript, React, Node.js y bases de datos. Trabajo con metodologías ágiles, principios SOLID y buenas prácticas de ingeniería de software. Mi enfoque está en crear código limpio, mantenible y escalable.',
-    ai: 'Cuento con formación especializada en Inteligencia Artificial, habiendo completado el Master de Founderz en IA e Innovación. Me dedico a la ingeniería de prompts, creación de imágenes con IA, automatización inteligente y aplicaciones prácticas de la inteligencia artificial en el ámbito empresarial. Mi objetivo es ayudar a las empresas a aprovechar el potencial de la IA de manera efectiva y accesible.',
-    philosophy: 'Creo en la cercanía con los clientes, entender sus necesidades reales y ofrecer soluciones simples y confiables. La tecnología debe ser accesible y útil, sin complicaciones innecesarias.',
+    human: 'Soy Franco Paul Cantero Brunelli, y me dedico a crear soluciones digitales que realmente funcionen. Creo que la tecnología debe ser simple y útil, no complicada. Mi objetivo es ayudarte a hacer crecer tu negocio sin que tengas que entender términos técnicos complicados.',
+    technical: 'Trabajo creando sitios web, aplicaciones y programas. Uso las herramientas y métodos más modernos, pero siempre pensando en que el resultado final sea algo fácil de usar para vos. No me importa tanto la tecnología que uso, sino que funcione bien y te sirva.',
+    ai: 'Estudié Inteligencia Artificial y sé cómo usarla para ayudar a tu negocio. Puedo automatizar tareas repetitivas, crear imágenes, analizar información y enseñarte a usar la IA de forma práctica. Todo esto te lo explico en palabras simples, sin complicarte.',
+    philosophy: 'Creo en escucharte, entender qué necesitás realmente y crear soluciones que funcionen. No me gusta complicar las cosas. Prefiero hacer algo simple que funcione bien, antes que algo complejo que nadie entienda.',
   },
   en: {
-    human: 'I am Franco Paul Cantero Brunelli, a software development technician passionate about creating solutions that really matter. I believe in technology as a tool to improve people\'s and businesses\' daily lives, not as an end in itself.',
-    technical: 'I specialize in full-stack development with TypeScript, React, Node.js and databases. I work with agile methodologies, SOLID principles and software engineering best practices. My focus is on creating clean, maintainable and scalable code.',
-    ai: 'I have specialized training in Artificial Intelligence, having completed the Founderz Master\'s in AI and Innovation. I focus on prompt engineering, AI image creation, intelligent automation and practical applications of artificial intelligence in business. My goal is to help companies leverage the potential of AI effectively and accessibly.',
-    philosophy: 'I believe in closeness with clients, understanding their real needs and offering simple and reliable solutions. Technology should be accessible and useful, without unnecessary complications.',
+    human: 'I am Franco Paul Cantero Brunelli, and I create digital solutions that actually work. I believe technology should be simple and useful, not complicated. My goal is to help you grow your business without having to understand complicated technical terms.',
+    technical: 'I work creating websites, applications and programs. I use the most modern tools and methods, but always thinking that the final result should be something easy to use for you. I don\'t care as much about the technology I use, but that it works well and serves you.',
+    ai: 'I studied Artificial Intelligence and know how to use it to help your business. I can automate repetitive tasks, create images, analyze information and teach you to use AI in a practical way. I explain everything in simple words, without complicating things.',
+    philosophy: 'I believe in listening to you, understanding what you really need and creating solutions that work. I don\'t like to complicate things. I prefer to do something simple that works well, rather than something complex that no one understands.',
   },
 };
 ---
@@ -75,7 +75,7 @@ const bio = {
           <!-- Párrafo técnico -->
           <section>
             <h2 class="text-2xl font-bold text-light-text-primary dark:text-white mb-4">
-              {currentLocale === 'es' ? 'Experiencia técnica' : 'Technical experience'}
+              {currentLocale === 'es' ? 'Qué es lo que hago' : 'What I do'}
             </h2>
             <p class="text-lg text-light-text-primary dark:text-white leading-relaxed">
               {currentLocale === 'es' ? bio.es.technical : bio.en.technical}

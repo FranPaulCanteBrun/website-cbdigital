@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://innovatac.com/sitemap.xml
+# Bloquear acceso a áreas sensibles
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.env$
+
+Sitemap: https://cbdigital.com.ar/sitemap.xml
 

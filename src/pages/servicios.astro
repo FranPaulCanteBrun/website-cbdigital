@@ -61,9 +61,240 @@ const servicesList = [
             description={services[service.key as keyof typeof services].description}
             benefits={services[service.key as keyof typeof services].benefits}
             icon={service.icon}
+            href={`#${service.key}`}
           />
         ))}
       </div>
+    </div>
+  </div>
+
+  <!-- Secciones de detalle por servicio -->
+  <div class="py-16 bg-light-bg-secondary dark:bg-dark-bg-secondary">
+    <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Sección: Apps de escritorio -->
+      <section id="desktop" class="scroll-mt-24 mb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-light-text-primary dark:text-white mb-4">
+              {services.desktop.title}
+            </h2>
+            <p class="text-lg text-light-text-secondary dark:text-[#f5f5f5] max-w-2xl mx-auto">
+              {services.desktop.description}
+            </p>
+          </div>
+          
+          <!-- Contenedor para capturas/videos del proyecto de historia clínica -->
+          <div class="bg-light-bg-primary dark:bg-dark-bg-primary rounded-xl p-6 md:p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-light-text-primary dark:text-white mb-6">
+              {currentLocale === 'es' ? 'Historia Clínica Digital - Nefrología' : 'Digital Medical Record - Nephrology'}
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div class="space-y-4">
+                <p class="text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Aplicación de escritorio desarrollada para centralizar la gestión completa de pacientes nefrológicos en un único entorno digital.'
+                    : 'Desktop application developed to centralize the complete management of nephrology patients in a single digital environment.'}
+                </p>
+                <ul class="space-y-2 text-sm text-light-text-secondary dark:text-[#f5f5f5]">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{currentLocale === 'es' ? 'Gestión de datos personales y clínicos' : 'Management of personal and clinical data'}</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{currentLocale === 'es' ? 'Almacenamiento de radiografías y estudios' : 'Storage of X-rays and studies'}</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{currentLocale === 'es' ? 'Resultados de laboratorio y evoluciones' : 'Laboratory results and evolutions'}</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{currentLocale === 'es' ? 'Documentos adjuntos organizados' : 'Organized attached documents'}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-light-bg-secondary dark:bg-dark-bg-secondary rounded-lg p-4 flex items-center justify-center min-h-[300px]">
+                <p class="text-light-text-secondary dark:text-[#f5f5f5] text-center">
+                  {currentLocale === 'es' 
+                    ? '📸 Aquí puedes agregar capturas de pantalla o videos de la aplicación'
+                    : '📸 You can add screenshots or videos of the application here'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Sitios web -->
+      <section id="web" class="scroll-mt-24 mb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-light-text-primary dark:text-white mb-4">
+              {services.web.title}
+            </h2>
+            <p class="text-lg text-light-text-secondary dark:text-[#f5f5f5] max-w-2xl mx-auto">
+              {services.web.description}
+            </p>
+          </div>
+          
+          <div class="bg-light-bg-primary dark:bg-dark-bg-primary rounded-xl p-6 md:p-8 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-light-bg-secondary dark:bg-dark-bg-secondary rounded-lg p-4 flex items-center justify-center min-h-[300px]">
+                <p class="text-light-text-secondary dark:text-[#f5f5f5] text-center">
+                  {currentLocale === 'es' 
+                    ? '📸 Aquí puedes agregar capturas de sitios web desarrollados'
+                    : '📸 You can add screenshots of developed websites here'}
+                </p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-light-text-primary dark:text-white">
+                  {currentLocale === 'es' ? 'Ejemplos de proyectos web' : 'Web project examples'}
+                </h3>
+                <p class="text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Sitios web responsivos, optimizados para SEO y con excelente rendimiento.'
+                    : 'Responsive websites, SEO optimized and with excellent performance.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Apps móviles -->
+      <section id="mobile" class="scroll-mt-24 mb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-light-text-primary dark:text-white mb-4">
+              {services.mobile.title}
+            </h2>
+            <p class="text-lg text-light-text-secondary dark:text-[#f5f5f5] max-w-2xl mx-auto">
+              {services.mobile.description}
+            </p>
+          </div>
+          
+          <div class="bg-light-bg-primary dark:bg-dark-bg-primary rounded-xl p-6 md:p-8 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-light-text-primary dark:text-white">
+                  {currentLocale === 'es' ? 'Aplicaciones móviles' : 'Mobile applications'}
+                </h3>
+                <p class="text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Apps nativas e híbridas para iOS y Android.'
+                    : 'Native and hybrid apps for iOS and Android.'}
+                </p>
+              </div>
+              <div class="bg-light-bg-secondary dark:bg-dark-bg-secondary rounded-lg p-4 flex items-center justify-center min-h-[300px]">
+                <p class="text-light-text-secondary dark:text-[#f5f5f5] text-center">
+                  {currentLocale === 'es' 
+                    ? '📱 Aquí puedes agregar capturas o videos de apps móviles'
+                    : '📱 You can add screenshots or videos of mobile apps here'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Inteligencia Artificial -->
+      <section id="ai" class="scroll-mt-24 mb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-light-text-primary dark:text-white mb-4">
+              {services.ai.title}
+            </h2>
+            <p class="text-lg text-light-text-secondary dark:text-[#f5f5f5] max-w-2xl mx-auto">
+              {services.ai.description}
+            </p>
+          </div>
+          
+          <div class="bg-light-bg-primary dark:bg-dark-bg-primary rounded-xl p-6 md:p-8 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-light-bg-secondary dark:bg-dark-bg-secondary rounded-lg p-4 flex items-center justify-center min-h-[300px]">
+                <p class="text-light-text-secondary dark:text-[#f5f5f5] text-center">
+                  {currentLocale === 'es' 
+                    ? '🤖 Aquí puedes agregar ejemplos de proyectos con IA'
+                    : '🤖 You can add examples of AI projects here'}
+                </p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-light-text-primary dark:text-white">
+                  {currentLocale === 'es' ? 'Soluciones con IA' : 'AI Solutions'}
+                </h3>
+                <p class="text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Automatización inteligente, generación de imágenes y análisis de datos.'
+                    : 'Intelligent automation, image generation and data analysis.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Asesoramiento -->
+      <section id="consulting" class="scroll-mt-24">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-light-text-primary dark:text-white mb-4">
+              {services.consulting.title}
+            </h2>
+            <p class="text-lg text-light-text-secondary dark:text-[#f5f5f5] max-w-2xl mx-auto">
+              {services.consulting.description}
+            </p>
+          </div>
+          
+          <div class="bg-light-bg-primary dark:bg-dark-bg-primary rounded-xl p-6 md:p-8 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-3xl mb-3">📊</div>
+                <h3 class="font-bold text-light-text-primary dark:text-white mb-2">
+                  {currentLocale === 'es' ? 'Análisis' : 'Analysis'}
+                </h3>
+                <p class="text-sm text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Evaluación de necesidades técnicas'
+                    : 'Technical needs evaluation'}
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-3">🏗️</div>
+                <h3 class="font-bold text-light-text-primary dark:text-white mb-2">
+                  {currentLocale === 'es' ? 'Arquitectura' : 'Architecture'}
+                </h3>
+                <p class="text-sm text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Diseño de soluciones'
+                    : 'Solution design'}
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-3">📋</div>
+                <h3 class="font-bold text-light-text-primary dark:text-white mb-2">
+                  {currentLocale === 'es' ? 'Planificación' : 'Planning'}
+                </h3>
+                <p class="text-sm text-light-text-secondary dark:text-[#f5f5f5]">
+                  {currentLocale === 'es' 
+                    ? 'Estimaciones y roadmap'
+                    : 'Estimates and roadmap'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </BaseLayout>

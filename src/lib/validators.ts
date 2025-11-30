@@ -61,12 +61,30 @@ export function validateContactForm(data: unknown): {
 
 /**
  * Sanitiza un string removiendo caracteres peligrosos
+ * Protección contra XSS, inyección SQL y otros ataques
  */
 export function sanitizeString(input: string): string {
+  if (typeof input !== 'string') {
+    return '';
+  }
+  
   return input
-    .replace(/[<>]/g, '') // Remover < y >
-    .replace(/javascript:/gi, '') // Remover javascript:
-    .replace(/on\w+=/gi, '') // Remover event handlers
+    // Remover caracteres HTML peligrosos
+    .replace(/[<>]/g, '')
+    // Remover protocolos peligrosos
+    .replace(/javascript:/gi, '')
+    .replace(/data:/gi, '')
+    .replace(/vbscript:/gi, '')
+    .replace(/onload=/gi, '')
+    .replace(/onerror=/gi, '')
+    // Remover event handlers
+    .replace(/on\w+\s*=/gi, '')
+    // Remover caracteres de control
+    .replace(/[\x00-\x1F\x7F]/g, '')
+    // Remover caracteres Unicode peligrosos
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
+    // Normalizar espacios múltiples
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
